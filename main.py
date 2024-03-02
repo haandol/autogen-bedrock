@@ -28,17 +28,21 @@ else:
     ]
 
 
+def is_termination_msg(msg):
+    return "TERMINATE" in msg.get("content", "").rstrip().upper()
+
+
 user_proxy = autogen.UserProxyAgent(
     name="user_proxy",
     human_input_mode="NEVER",
     max_consecutive_auto_reply=10,
-    is_termination_msg=lambda x: x.get("content", "").rstrip().endswith("TERMINATE"),
-    code_execution_config={"work_dir": "coding", "use_docker": False},
+    is_termination_msg=is_termination_msg,
+    code_execution_config={"work_dir": "coding", "use_docker": True},
     system_message=SystemMessage,
 )
 
 assistant = autogen.AssistantAgent("coder", llm_config={"config_list": config_list})
 
 user_proxy.initiate_chat(
-    assistant, message="Write python script that lists the number from 1 to 100."
+    assistant, message="Plot a chart of NVDA and TESLA stock price change YTD."
 )

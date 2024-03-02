@@ -20,7 +20,7 @@ pip install -r requirements.txt
 run litellm
 
 ```bash
-litellm --model bedrock/anthropic.claude-v2:1
+AWS_REGION=us-east-1 litellm --model bedrock/anthropic.claude-v2:1
 ```
 
 run the application
