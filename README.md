@@ -1,6 +1,6 @@
 # Autogen Bedrock
 
-This is a simple example of how to use the autogen with bedrock.
+This is a simple example of how to use the Autogen with bedrock.
 
 # Prerequisites
 
@@ -23,12 +23,6 @@ run litellm
 AWS_REGION=us-east-1 litellm --model bedrock/anthropic.claude-v2:1
 ```
 
-run the application
-
-```bash
-python main.py
-```
-
 ## Run app locally with Ollama
 
 install [ollama](https://ollama.com)
@@ -38,7 +32,15 @@ brew install ollama
 ollama run codellama:7b-instruct
 ```
 
-run the application
+# Test
+
+## Copy env
+
+```bash
+cp env/prod.env .env
+```
+
+## Run the application
 
 ```bash
 python main.py
