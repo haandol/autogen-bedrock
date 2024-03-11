@@ -9,11 +9,11 @@ from prompt import SystemMessage
 dotenv.load_dotenv()
 
 if os.environ.get("ENV") == "production":
-    logger.info("use bedrock-claude")
+    logger.info("use bedrock claude-v3")
     config_list = [
         {
-            "model": "bedrock-claude",
-            "base_url": "http://localhost:8000/v1",
+            "model": "bedrock-claude-v3",
+            "base_url": "http://localhost:4000",
             "api_key": "nil",
         }
     ]

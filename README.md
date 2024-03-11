@@ -5,7 +5,7 @@ This is a simple example of how to use the Autogen with bedrock.
 # Prerequisites
 
 - AWS CLI already configured with Administrator permission
-- Python 3.10+
+- Python 3.12+
 
 # Setup
 
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 run litellm
 
 ```bash
-AWS_REGION=us-east-1 litellm --model bedrock/anthropic.claude-v2:1
+AWS_REGION=us-east-1 litellm --model anthropic.claude-3-sonnet-20240229-v1:0
 ```
 
 ## Run app locally with Ollama
