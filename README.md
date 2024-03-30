@@ -29,7 +29,7 @@ install [ollama](https://ollama.com)
 
 ```bash
 brew install ollama
-ollama run codellama:7b-instruct
+ollama run dolphincoder
 ```
 
 # Test
