@@ -1,5 +1,3 @@
-import os
-
 import dotenv
 import autogen
 
@@ -8,24 +6,14 @@ from prompt import SystemMessage
 
 dotenv.load_dotenv()
 
-if os.environ.get("ENV") == "production":
-    logger.info("use bedrock claude-v3")
-    config_list = [
-        {
-            "model": "bedrock-claude-v3",
-            "base_url": "http://localhost:4000",
-            "api_key": "nil",
-        }
-    ]
-else:
-    logger.info("use ollama")
-    config_list = [
-        {
-            "model": "codellama:7b-instruct",
-            "base_url": "http://localhost:11434/v1",
-            "api_key": "nil",
-        },
-    ]
+logger.info("use bedrock claude-v3")
+config_list = [
+    {
+        "model": "bedrock-claude-v3",
+        "base_url": "http://localhost:4000",
+        "api_key": "nil",
+    }
+]
 
 
 def is_termination_msg(msg):

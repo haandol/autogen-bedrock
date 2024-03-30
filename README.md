@@ -23,15 +23,6 @@ run litellm
 AWS_REGION=us-east-1 litellm --model anthropic.claude-3-sonnet-20240229-v1:0 --drop_params
 ```
 
-## Run app locally with Ollama
-
-install [ollama](https://ollama.com)
-
-```bash
-brew install ollama
-ollama run dolphincoder
-```
-
 # Test
 
 ## Copy env
